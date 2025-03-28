@@ -5,16 +5,17 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { Analytics } from '@vercel/analytics/react'
+import Script from 'next/script'
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  preload: true,
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
-  title: 'TheSCAN',
-  description: 'The future of blockchain technology',
+  title: 'TheSCAN - Global Liquidity Intelligence Layer',
+  description: 'Unified blockchain analytics and cross-chain intelligence platform for institutional clients.',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -43,6 +44,20 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16961074707"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16961074707');
+          `}
+        </Script>
+
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
             <Navbar />
