@@ -71,24 +71,24 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
             <Link
               href="/#problem"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Market Intelligence
             </Link>
             <Link
               href="/#solution"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Analytics Platform
             </Link>
             <Link
               href="/#vision"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Future Vision
@@ -98,7 +98,7 @@ export default function Navbar() {
                 toggleTheme();
                 setIsMenuOpen(false);
               }}
-              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10"
+              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             >
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
             </button>

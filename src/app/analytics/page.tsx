@@ -160,12 +160,12 @@ export default function AnalyticsPage() {
           </div>
 
           {/* Category Navigation */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 mb-8 sm:mb-12">
             {categories.map((category, index) => (
               <motion.button
                 key={category.title}
                 onClick={() => setSelectedCategory(index)}
-                className={`p-4 rounded-xl transition-all duration-300 ${
+                className={`p-3 sm:p-4 rounded-xl transition-all duration-300 ${
                   selectedCategory === index
                     ? `bg-gradient-to-r ${category.color} text-white`
                     : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
@@ -173,30 +173,23 @@ export default function AnalyticsPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <category.icon className="w-6 h-6 mx-auto mb-2" />
-                <span className="text-sm font-medium">{category.title}</span>
+                <category.icon className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-1 sm:mb-2" />
+                <span className="text-xs sm:text-sm font-medium">{category.title}</span>
               </motion.button>
             ))}
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {categories[selectedCategory].features.map((feature, index) => (
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className="glass-effect p-6 rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-300"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-effect p-4 sm:p-6 rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                  <Lock className="w-5 h-5 text-gray-400" />
-                </div>
-                <div className="flex items-center text-sm text-gray-400">
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  Premium Feature
-                </div>
+                <p className="text-sm sm:text-base text-gray-300">{feature}</p>
               </motion.div>
             ))}
           </div>
