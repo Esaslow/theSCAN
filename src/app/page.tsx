@@ -174,6 +174,45 @@ export default function Home() {
             </ScrollAnimation>
           </div>
 
+          {/* Visualization and Use Case Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 items-center">
+            {/* Liquidity Visualization */}
+            <ScrollAnimation>
+              <div className="glass-effect p-4 rounded-xl w-full max-w-[500px] mx-auto">
+                <div className="relative w-full aspect-square bg-gray-900/30 rounded-xl overflow-hidden">
+                  <LiquidityVisualization />
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Use Case Example */}
+            <ScrollAnimation>
+              <div className="glass-effect p-6 sm:p-8 rounded-xl">
+                <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-primary-400 mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Institutional Use Case</h3>
+                <div className="space-y-4">
+                  <p className="text-base sm:text-lg text-gray-300">
+                    Imagine a central bank running a CBDC on a private chain. With TheSCAN, they could:
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span className="text-base sm:text-lg text-gray-300">Track interaction points across the entire DeFi landscape</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span className="text-base sm:text-lg text-gray-300">Ensure compliance and spot risks in real-time</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span className="text-base sm:text-lg text-gray-300">Price assets accurately using real liquidity conditions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
           {/* Key Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <ScrollAnimation>
