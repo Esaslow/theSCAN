@@ -34,6 +34,18 @@ export default function Navbar() {
               <Link href="/#vision" className="text-gray-300 hover:text-white transition-colors">
                 Future Vision
               </Link>
+              <Link 
+                href="/analytics" 
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Analytics
+              </Link>
+              <Link 
+                href="/team" 
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Team
+              </Link>
               <button
                 onClick={() => setIsContactModalOpen(true)}
                 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -100,6 +112,20 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Future Vision
+            </Link>
+            <Link 
+              href="/analytics" 
+              className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Analytics
+            </Link>
+            <Link 
+              href="/team" 
+              className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Team
             </Link>
             <button
               onClick={() => {

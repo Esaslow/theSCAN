@@ -78,6 +78,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollAnimation>
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gradient">The Fragmented Skies</h2>
+            <p className="text-lg sm:text-xl text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+              In today's blockchain ecosystem, each chain operates in isolation, creating a fragmented landscape where valuable insights are lost between silos.
+            </p>
           </ScrollAnimation>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
@@ -121,6 +124,59 @@ export default function Home() {
                   <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                     Just as air traffic control needs a unified view of all aircraft, blockchain ecosystems need a comprehensive view of all assets and transactions across chains.
                   </p>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Additional Explanatory Boxes */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ScrollAnimation>
+              <div className="glass-effect p-6 sm:p-8 rounded-xl">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">The Siloed Reality</h3>
+                <div className="space-y-4">
+                  <p className="text-gray-300">
+                    Today's blockchain analytics tools are like telescopes that can only see one star at a time. They excel at analyzing individual chains but fail to capture the interconnected nature of modern blockchain ecosystems.
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Each chain maintains its own isolated data</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Cross-chain transactions create blind spots</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Market inefficiencies remain hidden</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={0.2}>
+              <div className="glass-effect p-6 sm:p-8 rounded-xl">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">TheSCAN Solution</h3>
+                <div className="space-y-4">
+                  <p className="text-gray-300">
+                    TheSCAN acts as a unified control tower, providing a comprehensive view of all blockchain activity. Our platform bridges the gaps between chains, offering unprecedented visibility into cross-chain movements and market dynamics.
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Real-time cross-chain transaction tracking</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Unified liquidity analysis across networks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-400 mr-2">•</span>
+                      <span>Comprehensive risk assessment</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </ScrollAnimation>
