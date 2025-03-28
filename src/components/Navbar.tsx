@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 import ScrollProgress from './ScrollProgress';
+import ContactSalesModal from './ContactSalesModal';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -32,6 +34,12 @@ export default function Navbar() {
               <Link href="/#vision" className="text-gray-300 hover:text-white transition-colors">
                 Future Vision
               </Link>
+              <button
+                onClick={() => setIsContactModalOpen(true)}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Sales
+              </button>
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-white/10 transition-colors"
@@ -95,6 +103,15 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => {
+                setIsContactModalOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              Contact Sales
+            </button>
+            <button
+              onClick={() => {
                 toggleTheme();
                 setIsMenuOpen(false);
               }}
@@ -105,6 +122,12 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      {/* Contact Sales Modal */}
+      <ContactSalesModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </>
   );
 } 

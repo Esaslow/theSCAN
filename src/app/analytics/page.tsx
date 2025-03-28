@@ -10,8 +10,13 @@ import {
   Database, 
   Clock,
   Lock,
-  Sparkles
+  Sparkles,
+  Network,
+  Shield,
+  Globe,
+  BarChart
 } from 'lucide-react';
+import ContactSalesModal from '@/components/ContactSalesModal';
 
 const categories = [
   {
@@ -140,6 +145,7 @@ const categories = [
 
 export default function AnalyticsPage() {
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
@@ -212,12 +218,21 @@ export default function AnalyticsPage() {
             <p className="text-xl text-gray-300 mb-8">
               Get access to all premium features with our enterprise subscription
             </p>
-            <button className="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+            <button 
+              onClick={() => setIsContactModalOpen(true)}
+              className="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+            >
               Contact Sales
             </button>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Contact Sales Modal */}
+      <ContactSalesModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </main>
   );
 } 
