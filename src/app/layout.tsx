@@ -5,7 +5,11 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: 'TheSCAN',
@@ -18,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
