@@ -189,7 +189,14 @@ export default function AnalyticsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-effect p-4 sm:p-6 rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer"
               >
-                <p className="text-sm sm:text-base text-gray-300">{feature}</p>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-white">{feature}</h3>
+                  <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
+                </div>
+                <div className="flex items-center text-xs sm:text-sm text-gray-400">
+                  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                  Premium Feature
+                </div>
               </motion.div>
             ))}
           </div>
