@@ -23,6 +23,7 @@ import {
   Network
 } from 'lucide-react';
 import LiquidityVisualization from '@/components/LiquidityVisualization';
+import Link from 'next/link';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -62,9 +63,9 @@ export default function Home() {
             </p>
           </ScrollAnimation>
           <ScrollAnimation delay={0.4}>
-            <button className="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+            <Link href="/analytics" className="glass-effect px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
               Explore Analytics
-            </button>
+            </Link>
           </ScrollAnimation>
         </div>
       </section>
