@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from 'next/script'
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <Analytics />
+            <SpeedInsights />
           </div>
         </ThemeProvider>
       </body>
