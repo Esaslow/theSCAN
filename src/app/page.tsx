@@ -39,16 +39,16 @@ export default function Home() {
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section id="home" className="w-full bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-20 relative overflow-hidden">
-        {/* Animated background grid */}
-        <div className="absolute inset-0 bg-grid opacity-10"></div>
+        {/* Enhanced animated background grid */}
+        <div className="absolute inset-0 bg-grid opacity-10 animate-pulse"></div>
         
-        {/* Animated gradient orbs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
+        {/* Enhanced animated gradient orbs */}
+        <div className="absolute top-0 left-0 w-[40rem] h-[40rem] bg-primary-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-secondary-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <ScrollAnimation>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-primary-400 to-purple-400">
               Data-Driven Financial Intelligence
             </h1>
           </ScrollAnimation>
@@ -79,10 +79,10 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 {/* Data Sources */}
                 <div className="flex justify-center space-x-8 mb-8">
-                  <div className="glass-effect p-6 rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
-                    <ChartIcon className="w-8 h-8 text-primary-400 mb-4" />
-                    <div className="text-lg font-semibold text-white">Market Data</div>
-                    <div className="text-sm text-gray-300">Real-time feeds</div>
+                  <div className="glass-effect p-6 rounded-xl hover:scale-105 hover:brightness-125 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-500 cursor-pointer group">
+                    <ChartIcon className="w-8 h-8 text-primary-400 mb-4 group-hover:text-blue-300 transition-colors duration-300" />
+                    <div className="text-lg font-semibold text-white group-hover:text-blue-200 transition-colors duration-300">Market Data</div>
+                    <div className="text-sm text-gray-300 group-hover:text-blue-300 transition-colors duration-300">Real-time feeds</div>
                   </div>
                   <div className="glass-effect p-6 rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
                     <BlockchainIcon className="w-8 h-8 text-primary-400 mb-4" />
@@ -96,24 +96,24 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Processing Engine */}
+                {/* Processing Engine - Enhanced */}
                 <div className="relative">
-                  {/* Outer glow */}
-                  <div className="absolute inset-0 bg-blue-500/5 blur-[80px] rounded-full"></div>
-                  {/* Inner glow */}
-                  <div className="absolute inset-8 bg-blue-500/10 blur-2xl rounded-full"></div>
-                  {/* Glass container */}
-                  <div className="relative glass-effect w-40 h-40 rounded-full flex flex-col items-center justify-center bg-slate-800/40 backdrop-blur-lg border border-slate-700/30">
-                    {/* Icon background */}
+                  {/* Enhanced outer glow */}
+                  <div className="absolute inset-0 bg-blue-500/20 blur-[120px] rounded-full animate-pulse"></div>
+                  {/* Enhanced inner glow */}
+                  <div className="absolute inset-8 bg-blue-500/30 blur-3xl rounded-full"></div>
+                  {/* Enhanced glass container */}
+                  <div className="relative glass-effect w-40 h-40 rounded-full flex flex-col items-center justify-center bg-slate-800/40 backdrop-blur-xl border border-slate-700/30 hover:scale-105 hover:border-blue-500/50 transition-all duration-500 group">
+                    {/* Enhanced icon background */}
                     <div className="relative mb-2">
-                      <div className="absolute inset-0 bg-blue-500/5 rounded-full blur-sm"></div>
-                      <div className="relative w-16 h-16 flex items-center justify-center bg-blue-900/20 rounded-full">
-                        <ZapIcon className="w-10 h-10 text-blue-400" />
+                      <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative w-16 h-16 flex items-center justify-center bg-blue-900/30 rounded-full group-hover:bg-blue-800/40 transition-all duration-500">
+                        <ZapIcon className="w-10 h-10 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
                       </div>
                     </div>
-                    {/* Text */}
-                    <div className="text-white font-semibold text-lg">TheSCAN</div>
-                    <div className="text-blue-300/80 text-sm">Engine</div>
+                    {/* Enhanced text */}
+                    <div className="text-white font-semibold text-lg group-hover:text-blue-200 transition-colors duration-500">TheSCAN</div>
+                    <div className="text-blue-300/80 text-sm group-hover:text-blue-400 transition-colors duration-500">Engine</div>
                   </div>
                 </div>
 
@@ -451,47 +451,47 @@ export default function Home() {
           {/* Output Interfaces */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <ScrollAnimation>
-              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
-                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6">
-                  <ShieldIcon className="w-8 h-8 text-blue-400" />
+              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-125 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all duration-500 cursor-pointer group">
+                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6 group-hover:bg-blue-500/20 transition-all duration-500">
+                  <ShieldIcon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Compliance Dashboard</h3>
-                <p className="text-gray-400">Real-time regulatory compliance monitoring across all chains</p>
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-500">Compliance Dashboard</h3>
+                <p className="text-gray-400 group-hover:text-blue-300/80 transition-colors duration-500">Real-time regulatory compliance monitoring across all chains</p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation delay={0.2}>
-              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
-                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6">
-                  <NetworkIcon className="w-8 h-8 text-blue-400" />
+              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-125 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all duration-500 cursor-pointer group">
+                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6 group-hover:bg-blue-500/20 transition-all duration-500">
+                  <NetworkIcon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Asset Flow Map</h3>
-                <p className="text-gray-400">Visual tracking of cross-chain asset movements</p>
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-500">Asset Flow Map</h3>
+                <p className="text-gray-400 group-hover:text-blue-300/80 transition-colors duration-500">Visual tracking of cross-chain asset movements</p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation delay={0.4}>
-              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
-                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6">
-                  <ChartIcon className="w-8 h-8 text-blue-400" />
+              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-125 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all duration-500 cursor-pointer group">
+                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6 group-hover:bg-blue-500/20 transition-all duration-500">
+                  <ChartIcon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Risk Monitor</h3>
-                <p className="text-gray-400">Real-time risk assessment across the ecosystem</p>
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-500">Risk Monitor</h3>
+                <p className="text-gray-400 group-hover:text-blue-300/80 transition-colors duration-500">Real-time risk assessment across the ecosystem</p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation delay={0.6}>
-              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
-                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6">
-                  <BarChartIcon className="w-8 h-8 text-blue-400" />
+              <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 h-full hover:scale-105 hover:brightness-125 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all duration-500 cursor-pointer group">
+                <div className="p-3 bg-blue-500/10 rounded-xl w-fit mb-6 group-hover:bg-blue-500/20 transition-all duration-500">
+                  <BarChartIcon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Pricing Interface</h3>
-                <p className="text-gray-400">CBDC and RWA pricing across all chains</p>
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-500">Pricing Interface</h3>
+                <p className="text-gray-400 group-hover:text-blue-300/80 transition-colors duration-500">CBDC and RWA pricing across all chains</p>
               </div>
             </ScrollAnimation>
           </div>
 
           {/* Footer Quote */}
           <ScrollAnimation>
-            <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-center">
-              <p className="text-xl text-gray-400">
+            <div className="glass-effect p-8 rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 text-center hover:border-blue-500/30 transition-all duration-500">
+              <p className="text-xl text-gray-400 hover:text-blue-300/90 transition-colors duration-500">
                 From private CBDCs to public DeFi — TheSCAN gives you full-spectrum clarity.
               </p>
             </div>
