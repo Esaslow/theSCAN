@@ -1,0 +1,20 @@
+{
+  "name": "TheSCAN",
+  "short_name": "TheSCAN",
+  "description": "Empowering institutions with real-time market insights and cross-chain analytics",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0070f3",
+  "background_color": "#111827",
+  "display": "standalone"
+} 
