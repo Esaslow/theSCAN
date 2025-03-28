@@ -65,4 +65,22 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #0060df, #0097e6);
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0.2;
+  }
+}
+
+.animate-fly {
+  animation: fly 8s linear infinite;
 } 
