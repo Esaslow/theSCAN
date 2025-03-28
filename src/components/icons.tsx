@@ -1,31 +1,47 @@
 import {
-  Shield,
-  Database,
   BarChart,
+  Blocks,
+  LineChart,
+  CreditCard,
+  Database,
   Globe,
   Lock,
-  Zap,
-  Users,
-  CreditCard,
   Network,
-  Chart,
+  Shield,
   User,
-  Blocks
+  Users,
+  Zap
 } from 'lucide-react';
 
-// Export renamed components
-export const ShieldIcon = Shield;
+// Re-export with our desired names
+export const BlockchainIcon = Blocks;
+export const ChartIcon = LineChart;
+export const BarChartIcon = BarChart;
+export const CreditCardIcon = CreditCard;
 export const DatabaseIcon = Database;
-export const ChartIcon = Chart;
 export const GlobeIcon = Globe;
 export const LockIcon = Lock;
-export const ZapIcon = Zap;
-export const UsersIcon = Users;
-export const CreditCardIcon = CreditCard;
-export const BarChartIcon = BarChart;
 export const NetworkIcon = Network;
+export const ShieldIcon = Shield;
 export const UserIcon = User;
-export const BlockchainIcon = Blocks;
+export const UsersIcon = Users;
+export const ZapIcon = Zap;
+
+// Export all icons
+export {
+  BarChart,
+  Blocks,
+  LineChart,
+  CreditCard,
+  Database,
+  Globe,
+  Lock,
+  Network,
+  Shield,
+  User,
+  Users,
+  Zap
+};
 
 // Export types
 export type IconProps = React.ComponentProps<typeof Shield>;
