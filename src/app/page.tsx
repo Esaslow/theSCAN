@@ -440,18 +440,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Features</h2>
+      <section id="features" className="w-full py-16 sm:py-20 bg-[#11151C] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-400">Features</h2>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Real-time Analytics</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+            {/* Real-time Analytics */}
+            <div className="glass-effect rounded-xl p-6 sm:p-8 border border-gray-700/50 hover:border-blue-500/70 transition-all duration-300 h-full">
+              <h3 className="text-xl font-bold mb-4 text-white">Real-time Analytics</h3>
+              <p className="text-gray-300 mb-6">
                 Get instant insights into blockchain data with our powerful analytics engine.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center mt-auto"
               >
                 View Analytics
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -459,14 +461,16 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Cross-chain Support</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+            
+            {/* Cross-chain Support */}
+            <div className="glass-effect rounded-xl p-6 sm:p-8 border border-gray-700/50 hover:border-blue-500/70 transition-all duration-300 h-full">
+              <h3 className="text-xl font-bold mb-4 text-white">Cross-chain Support</h3>
+              <p className="text-gray-300 mb-6">
                 Monitor and analyze data across multiple blockchain networks seamlessly.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center mt-auto"
               >
                 Explore Networks
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -474,14 +478,16 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Custom Reports</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+            
+            {/* Custom Reports */}
+            <div className="glass-effect rounded-xl p-6 sm:p-8 border border-gray-700/50 hover:border-blue-500/70 transition-all duration-300 h-full">
+              <h3 className="text-xl font-bold mb-4 text-white">Custom Reports</h3>
+              <p className="text-gray-300 mb-6">
                 Generate detailed reports tailored to your specific needs and requirements.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center mt-auto"
               >
                 Create Reports
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -494,10 +500,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+      <section id="cta" className="w-full py-16 sm:py-20 bg-[#11151C] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-blue-400">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join us in revolutionizing blockchain analytics and data management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -509,7 +515,7 @@ export default function Home() {
             </Link>
             <button 
               onClick={() => setIsContactModalOpen(true)}
-              className="px-8 py-3 bg-white dark:bg-gray-800 text-blue-500 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 border border-blue-500"
+              className="px-8 py-3 glass-effect border border-blue-500 text-blue-400 rounded-full hover:bg-white/10 transition-all duration-300"
             >
               Contact Sales
             </button>
