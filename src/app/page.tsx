@@ -442,16 +442,16 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Features</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Real-time Analytics</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Get instant insights into blockchain data with our powerful analytics engine.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 font-medium inline-flex items-center"
+                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
               >
                 View Analytics
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -460,13 +460,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Cross-chain Support</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Cross-chain Support</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Monitor and analyze data across multiple blockchain networks seamlessly.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 font-medium inline-flex items-center"
+                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
               >
                 Explore Networks
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -475,13 +475,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Custom Reports</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Custom Reports</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Generate detailed reports tailored to your specific needs and requirements.
               </p>
               <Link 
                 href="/analytics" 
-                className="text-blue-500 hover:text-blue-600 font-medium inline-flex items-center"
+                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium inline-flex items-center"
               >
                 Create Reports
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -494,9 +494,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">Ready to Get Started?</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Join us in revolutionizing blockchain analytics and data management.
           </p>

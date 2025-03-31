@@ -24,31 +24,19 @@ export default function Navbar() {
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden sm:flex sm:items-center sm:space-x-8">
-              <Link href="/#problem" className="text-gray-300 hover:text-white transition-colors">
-                Market Intelligence
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
               </Link>
-              <Link href="/#solution" className="text-gray-300 hover:text-white transition-colors">
-                Analytics Platform
-              </Link>
-              <Link href="/#vision" className="text-gray-300 hover:text-white transition-colors">
-                Future Vision
-              </Link>
-              <Link 
-                href="/analytics" 
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                Analytics
-              </Link>
-              <Link 
-                href="/team" 
-                className="text-gray-300 hover:text-white transition-colors"
-              >
+              <Link href="/team" className="text-gray-300 hover:text-white transition-colors">
                 Team
               </Link>
-              <button
+              <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                Pricing
+              </Link>
+              <button 
                 onClick={() => setIsContactModalOpen(true)}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-all duration-300"
               >
                 Contact Sales
               </button>
@@ -126,6 +114,13 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Team
+            </Link>
+            <Link 
+              href="/pricing" 
+              className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
             </Link>
             <button
               onClick={() => {
